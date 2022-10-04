@@ -1,25 +1,20 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Mon Sep 12 22:54:02 2022
-
-@author: Dhawal
-"""
 import pandas as pd
 import os
-print("This is a detailed analysis of *Insert Name* restaurant")
-print("Main Menu")
-print("1. Our Carte De Jour")
-print("2. *Insert Name* in Data")
-print("Enter serial number of your choice as shown in the following example-\nEnter your choice:2")
-o1=int(input("Enter your choice:"))
-file1=pd.read_csv("Restaurant_Data.csv")
-while o1<=2:
+
+#file1=pd.read_csv("Restaurant_Data.csv")
+while True:
+    print("This is a detailed analysis of *Insert Name* restaurant")
+    print("Main Menu")
+    print("1. Our Carte De Jour")
+    print("2. *Insert Name* in Data")
+    print("Enter serial number of your choice as shown in the following example-\nEnter your choice:2")
+    o1=int(input("Enter your choice:"))
     if o1==1:
-        print("Do you want to-")
-        print("1. Display full menu\n2. Sort menu by price\n3. Return to main menu")
-        print("Enter serial number of your choice as shown in the following example-\nEnter your choice:2")
-        o2=int(input("Enter your choice:"))
-        while o2<=3:
+        while True:
+            print("Do you want to-")
+            print("1. Display full menu\n2. Sort menu by price\n3. Return to main menu")
+            print("Enter serial number of your choice as shown in the following example-\nEnter your choice:2")
+            o2=int(input("Enter your choice:"))
             if o2==1:
                 print("1. Drinks menu")
                 print("2. Display full menu")
@@ -99,8 +94,8 @@ while o1<=2:
                         beta=series1.index(b)
                         print(file2.loc[alpha,beta:])
             elif o2==3:
-                  os.system("IP Main File.py")
+                continue
             else:
                 print("Enter Valid Input")
                 exit()
-    elif o1==2:
+ #   elif o1==2:
